@@ -104,4 +104,5 @@ def say_hello():
 
 if __name__ == "__main__":
     # only for development
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run()

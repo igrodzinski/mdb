@@ -1,4 +1,4 @@
-runtime: python311
+runtime: python-compat
 
 env: flex
 handlers:
@@ -16,4 +16,4 @@ manual_scaling:
 resources:
   cpu: 1
   memory_gb: 0.5
-  disk_size_gb: 10
+  disk_size_gb: 1

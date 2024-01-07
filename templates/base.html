@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}" />
+        <script src="{{ url_for('static', filename='script.js')}}"></script>
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class=""><img src="{{ url_for('static', filename='media/logo.png') }}"/></div>
+    </header>
+    <ul id="navigation">
+    {% for item in navigation %}
+        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+    </ul>
+
+    {{ a_variable }}
+
+    {# a comment #}
+    <section id="main">
+        {% block content %}
+        {% endblock %}
+    </section>
+    <footer>
+        {% block footer %}
+        &copy; Copyright 2024 IG. All rights reserved
+        {% endblock %}
+    </footer>
+</body>
+</html>
